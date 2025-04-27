@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the container */
+  background-color: #f8f8f8; /* light background */
+}
+
+/* Frame container */
+.container {
+  width: 100%; /* Limit to your frame width */
+  min-height: 2829px; /* Frame height */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 columns */
+  gap: 8px;
+  padding: 20px;
+  background-color: white; /* white background like your Figma frame */
+}
+
+/* Each column */
+.column {
+  background-color: lightblue;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile */
+  }
+}

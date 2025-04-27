@@ -1,0 +1,34 @@
+.nav-container {
+  grid-column: 1 / span 12; /* Span across full width of the grid */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: white; /* Match your design */
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Stay on top while scrolling */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #495e57; /* Dark green like Little Lemon style */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #f4ce14; /* Highlight on hover (yellowish) */
+}

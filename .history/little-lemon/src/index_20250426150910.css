@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+  gap: 16px; /* spacing between columns, you can adjust */
+  padding: 0 20px; /* some space on the sides */
+  background-color: yellow;
+}

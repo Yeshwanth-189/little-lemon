@@ -1,0 +1,132 @@
+/* Grid Layout */
+.personal-details-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 350px;
+  padding: 40px 0;
+  background-color: #495e57; /* Match Reservation Section background */
+  color: white;
+}
+
+/* Empty margins */
+.personal-details-empty {
+  display: none;
+}
+
+/* Heading */
+.personal-details-heading {
+  font-size: 36px;
+  margin-bottom: 2%;
+  color: #f4ce14;
+  font-family: "roboto", sans-serif;
+}
+
+/* Main Section (3-10 columns) */
+.personal-details-main {
+  grid-column: 3 / span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each Row */
+.personal-details-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "roboto", sans-serif;
+}
+
+/* Each Column inside Row */
+.personal-details-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+}
+
+/* Inputs (First Name, Last Name, Email, Phone) */
+.personal-details-col input[type="text"],
+.personal-details-col input[type="email"],
+.personal-details-col input[type="tel"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  cursor: text;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.personal-details-col input[type="text"]:hover,
+.personal-details-col input[type="email"]:hover,
+.personal-details-col input[type="tel"]:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkbox Styling */
+.personal-details-col input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* Labels */
+.personal-details-col label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 4%;
+}
+
+/* Error Messages */
+.error-message {
+  color: orange;
+  font-size: 10px;
+  margin-top: 4px;
+  opacity: 0.8;
+  font-weight: 500;
+  font-family: "roboto", sans-serif;
+}
+
+/* Confirm Button */
+.submit-button {
+  background-color: #f4ce14;
+  color: #333;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ffd700;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .personal-details-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 0;
+  }
+
+  .personal-details-main {
+    grid-column: 1 / span 4;
+  }
+
+  .personal-details-row {
+    flex-direction: column;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}

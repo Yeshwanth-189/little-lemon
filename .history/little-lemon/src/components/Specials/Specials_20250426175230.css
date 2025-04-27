@@ -1,0 +1,150 @@
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
+  margin: 5% auto;
+  padding: 40px 0;
+}
+
+/* Empty Columns */
+.specials-empty {
+  display: none;
+}
+
+/* Specials Heading */
+.specials-heading {
+  grid-column: 3 / span 6; /* Start at 3, take 6 columns */
+  font-size: 40px;
+  font-weight: bold;
+  color: #495e57;
+  font-family: "karla", sans-serif;
+}
+
+/* Button */
+.specials-button {
+  grid-column: 9 / span 2; /* 9 to 10 */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.specials-button button {
+  padding: 12px 24px;
+  background-color: #f4ce14;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "roboto", sans-serif;
+}
+
+.specials-button button:hover {
+  background-color: #ffd700;
+}
+
+/* Dishes Section */
+.dishes {
+  grid-column: 3 / span 8; /* Centered */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  height: auto;
+}
+
+/* Each Dish Card */
+.dish-card {
+  background-color: #edefee;
+  border-radius: 12px;
+  flex: 1; /* 3 equal cards */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Dish Image */
+.dish-card img {
+  width: 100%;
+  min-height: 50%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Dish Header (Name + Price) */
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1%;
+  font-size: 20px;
+  font-family: "markazi-text", sans-serif;
+  color: #333;
+}
+
+.dish-header h3 {
+  font-weight: bold;
+}
+
+.dish-header span {
+  font-weight: bold;
+  margin-top: 9%;
+  color: #ee9972;
+}
+
+/* Dish Description */
+.dish-card p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Order Button */
+.order-button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #333;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .specials-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 0;
+  }
+
+  .specials-heading {
+    grid-column: 1 / span 4;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .specials-button {
+    grid-column: 1 / span 4;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .dishes {
+    grid-column: 1 / span 4;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .dish-card {
+    width: 100%;
+  }
+}

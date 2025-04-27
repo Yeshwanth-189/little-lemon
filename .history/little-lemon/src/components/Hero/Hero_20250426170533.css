@@ -1,0 +1,105 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  background-color: #495e57;
+  min-height: 400px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* Empty columns */
+.hero-empty {
+  display: none; /* 1-2 and 11-12 columns are empty */
+}
+
+/* Content Section */
+.hero-content {
+  grid-column: 3 / span 4; /* 3 to 6 */
+  width: 432px;
+  height: 331px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* So button is near bottom */
+  position: relative;
+  padding: 20px;
+  background-color: #495e57;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 2%;
+  color: #f4ce14;
+  font-family: "roboto", sans-serif;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: auto; /* Pushes button to bottom */
+  color: #333;
+}
+
+/* Reserve Button */
+.reserve-button {
+  width: fit-content;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #f4ce14;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start; /* Button stays at bottom left */
+  margin-top: 20px;
+}
+
+.reserve-button:hover {
+  background-color: #ffd700;
+}
+
+/* Image Section */
+.hero-image {
+  grid-column: 8 / span 3; /* starting from 7.5 to 10 */
+  width: 375px;
+  height: 325px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 0;
+    min-height: auto;
+  }
+
+  .hero-empty {
+    display: none;
+  }
+
+  .hero-content {
+    grid-column: 1 / span 4;
+    width: auto;
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-image {
+    grid-column: 1 / span 4;
+    width: auto;
+    height: 250px;
+    margin-top: 20px;
+  }
+}

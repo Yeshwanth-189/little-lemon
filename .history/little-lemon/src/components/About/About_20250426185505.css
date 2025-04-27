@@ -1,0 +1,104 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* Empty Columns */
+.about-empty {
+  display: none;
+}
+
+/* Text Section */
+.about-text {
+  grid-column: 3 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.about-text h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  color: #495e57;
+  margin-bottom: 0;
+}
+
+.about-text h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  color: #333;
+  margin-top: 0;
+}
+
+.about-text p {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Images Section */
+.about-images {
+  grid-column: 7 / span 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlap Style */
+.about-img-1 {
+  position: relative;
+  margin-left: 40%;
+  z-index: 2;
+}
+
+.about-img-2 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 0;
+  }
+
+  .about-text {
+    grid-column: 1 / span 4;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .about-images {
+    grid-column: 1 / span 4;
+    margin-top: 30px;
+  }
+
+  .about-images img {
+    width: 250px;
+  }
+
+  .about-img-2 {
+    top: 20px;
+    left: 20px;
+  }
+}
