@@ -6,6 +6,10 @@ import Specials from "./components/Specials/Specials";
 import Testimonials from "./components/Testimonials/Testimonials";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
+import Reservation from "./components/Reservation/Reservation";
+import ReservationImages from "./components/ReservationImages/ReservationImages";
+import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
+import PersonalDetailsImages from "./components/PersonalDetailsImages/PersonalDetailsImages";
 
 function Home() {
   return (
@@ -19,23 +23,32 @@ function Home() {
   );
 }
 
-function Menu() {
-  return <h1>Menu Page</h1>;
-}
-
-function Reservation() {
-  return <h1>Reservation Page</h1>;
-}
-
 function App() {
   return (
     <Router>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
+        <Route path="/menu" element={<Specials />} />
         <Route path="/about" element={<About />} />
-        <Route path="/reservation" element={<Reservation />} />
+        <Route
+          path="/reservation"
+          element={
+            <>
+              <Reservation />
+              <ReservationImages />
+            </>
+          }
+        />
+        <Route
+          path="/personal-details"
+          element={
+            <>
+              <PersonalDetails />
+              <PersonalDetailsImages />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
